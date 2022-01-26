@@ -1,0 +1,10 @@
+{
+	"listenerPort": 80,
+	"connection": {
+		"host": "localhost",
+		"user": "root",
+		"password": "",
+		"database": "pwi",
+		"multipleStatements": true
+	}
+}

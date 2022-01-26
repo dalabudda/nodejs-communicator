@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projekt PWI</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="Contacts">
+
+        <h3>Messages:</h3>
+
+        <div id="nonContactMessages"></div>
+
+        <h3>Contacts:</h3>
+
+        <div id="contacts"></div>
+
+    </div>
+
+    <div class="Right">
+
+        <div class="TopBar">
+
+            <div class="Search">
+                <input id="searchUser" type="text" placeholder="Search" oninput="searchUser()">
+                <div id="searchUserList"></div>
+            </div>
+
+            <div class="Account">
+                <img id="avatar"/>
+                <div id="myStatus"></div>
+                <div class="AccountActions">
+
+                    <div onclick="changeAvatar()">Change avatar</div>
+
+                    <div class="SetStatus">
+                        <span>Set status</span>
+                        <div class="SetStatusList">
+
+                            <div onclick="setStatus('Online')">
+                                <span>Online</span>
+                                <div class="Status Online"></div>
+                            </div>
+
+                            <div onclick="setStatus('Away')">
+                                <span>Away</span>
+                                <div class="Status Away"></div>
+                            </div>
+
+                            <div onclick="setStatus('Busy')">
+                                <span>Busy</span>
+                                <div class="Status Busy"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div onclick="logOut()">Log out</div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="chat" style="display: none;" class="Chat">
+
+            <div class="User">
+
+                <div class="UserAvatar">
+                    <img id="userAvatar"/>
+                </div>
+
+                <div class="userName">
+                    <span id="userName"></span>
+                </div>
+
+                <div class="AddDelContact">
+                    <div class="Button" id="addDelContact"></div>
+                </div>
+
+                <div class="DownloadConversation">
+                    <div id="downloadConversation" class="Button">
+                        Download conversation
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="messages">
+
+            </div>
+
+            <div class="NewMessage">
+
+                <div class="NewMessageInput">
+                    <input id="newMessage" type="text" placeholder="New message">
+                </div>
+
+                <div class="Send">
+                    <div class="Button" onclick="sendMessage()">
+                        Send
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="cover" style="display: none;"></div>
+
+    <div id="loginWindow" style="display: none;">
+        <div class="LoginWindowContainer">
+            <div>
+                Login:
+            </div>
+            <div>
+                <input id="userLogin" type="text">
+            </div>
+            <div>
+                Password:
+            </div>
+            <div>
+                <input id="userPassword" type="password">
+            </div>
+            <div class="Button" onclick="signIn()">
+                Log in
+            </div>
+            <div class="Button" onclick="signUp()">
+                Sign up
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

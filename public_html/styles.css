@@ -1,0 +1,413 @@
+body
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Button
+{
+    padding: 4px 10px;
+    height: 22px;
+    width: fit-content;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Button:hover
+{
+    background-color: #00a2ff;
+}
+
+.Contacts
+{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.Contacts h3 {
+    margin: 10px 5px;
+}
+
+.Contacts > div > div
+{
+    position: relative;
+    width: calc(100% - 10px);
+    height: 40px;
+    padding: 5px;
+}
+
+.Contacts > div > div:hover
+{
+    background-color: cyan;
+    cursor: pointer;
+}
+
+.Contacts > div > div > img
+{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.Contacts > div > div > span
+{
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    font-size: 15px;
+}
+
+.Contacts > div > div > span.ContactMessage
+{
+    top: 26px;
+    font-weight: bold;
+}
+
+.Status 
+{
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.Contacts .Status, .Account > .Status
+{
+    position: absolute;
+    top: 34px;
+    left: 34px;
+}
+
+.Online
+{
+    background-color: #00dd00;
+}
+
+.Away
+{
+    background-color: orange;
+}
+
+.Busy
+{
+    background-color: red;
+}
+
+.Offline
+{
+    background-color: gray;
+}
+
+.Right
+{
+    position: absolute;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+.TopBar
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.Search
+{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    padding: 4px 0;
+    width: calc(100% - 100px);
+    height: 22px;
+}
+
+#searchUserList
+{
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: 0;
+    z-index: 2;
+    background-color: cyan;
+}
+
+#searchUser:hover + #searchUserList, #searchUser:focus + #searchUserList, #searchUserList:hover
+{
+    display: block;
+}
+
+#searchUserList > div
+{
+    position: relative;
+    width: calc(100% - 4px);
+    min-width: 149px;
+    height: 30px;
+    padding: 2px;
+}
+
+#searchUserList > div:hover
+{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+#searchUserList > div > img
+{
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+#searchUserList > div > span
+{
+    position: relative;
+    float: left;
+    margin: 6px 4px;
+}
+
+.Account
+{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#avatar, #userAvatar
+{
+    width: 100%;
+    height: 100%;
+}
+
+.AccountActions
+{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: max-content;
+    background-color: darkcyan;
+    color: white;
+    z-index: 2;
+}
+
+.Account:hover .AccountActions, .AccountActions:hover
+{
+    display: block;
+}
+
+.AccountActions > div 
+{
+    position: relative;
+    width: calc(100% - 16px);
+    padding: 5px 8px;
+}
+
+.AccountActions > div:hover
+{
+    background-color: turquoise;
+}
+
+.SetStatusList
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100px;
+    background-color: turquoise;
+}
+
+.SetStatus:hover .SetStatusList
+{
+    display: block;
+}
+
+.SetStatusList > div
+{
+    position: relative;
+    width: calc(100% - 36px);
+    padding: 5px 8px 5px 28px;
+}
+
+.SetStatusList > div:hover
+{
+    background-color: darkcyan;
+}
+
+.SetStatusList .Status 
+{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+.Chat
+{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.User
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: deepskyblue;
+}
+
+.UserAvatar
+{
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: darkmagenta;
+}
+
+.userName
+{
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+
+.AddDelContact
+{
+    position: absolute;
+    top: 5px;
+    right: 225px;
+}
+
+.DownloadConversation
+{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+#messages
+{
+    position: relative;
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    height: calc(100% - 90px);
+    overflow: auto;
+}
+
+.MessageContainer
+{
+    float: left;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    margin: 5px 0;
+}
+
+.MyMessage, .UserMessage
+{
+    position: relative;
+    width: fit-content;
+    min-width: 200px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.MyMessage
+{
+    float: right;
+    background-color: #60cdff;
+}
+
+.UserMessage
+{
+    float: left;
+    background-color: #9fb4bb;
+}
+
+.MyMessage .Date, .UserMessage .Date
+{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.MyMessage .Text, .UserMessage .Text
+{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+.NewMessage
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: cyan;
+}
+
+.NewMessageInput
+{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    padding: 4px 0;
+    width: calc(100% - 120px);
+    height: 22px;
+}
+
+.NewMessageInput input
+{
+    width: calc(100% - 38px);
+}
+
+.Send
+{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+#cover
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: gray;
+}
+
+#loginWindow
+{
+    position: fixed;
+    top: 15px;
+    left: calc(50% - 150px);
+    padding: 30px;
+    width: 300px;
+    background-color: coral;
+}
+
+.LoginWindowContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
