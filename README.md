@@ -1,2 +1,4 @@
 # nodejs-communicator
- Projekty z przedmiotu Programowanie w internecie 01/2022
+App created for studies project 
+
+Warning: validation and error-handling not done yet due to the lack of time
